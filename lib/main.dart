@@ -2,6 +2,7 @@ import 'dart:math';
 import 'package:flutter/material.dart' hide Page;
 import 'package:joinu_component/routes/dash_page_route.dart';
 import 'package:joinu_component/routes/gradient_circular_progress.dart';
+import 'package:joinu_component/routes/reorderable_listview_page.dart';
 import 'package:joinu_component/routes/search_page.dart';
 import 'package:joinu_component/routes/stick_list.dart';
 import 'package:joinu_component/routes/swiper.dart';
@@ -87,6 +88,7 @@ List<Page> getRoutes(){
     Page("GradientCircularProgressIndicator", const GradientCircularProgressRoute()),
     Page("waterMark", const WatermarkRoute()),
     Page("dash_widget",  DashRoute()),
+    Page("recordableList",  ReorderableListPage()),
   ];
 }
 
