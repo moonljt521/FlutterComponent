@@ -134,16 +134,15 @@ class ListPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(children: _generateItem(context));
-  }
-
-  List<Widget> _generateItem(BuildContext context) {
-    return children.map<Widget>((page) {
+    return ListView.builder(
+        itemCount: children.length,
+        itemBuilder: (ctx, index){
+      var page = children[index];
       return ListTile(
         title: Text(page.title),
         trailing: const Icon(Icons.keyboard_arrow_right),
         onTap: () => page.openPage(context),
       );
-    }).toList();
+    });
   }
 }
